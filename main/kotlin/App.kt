@@ -22,7 +22,7 @@ class App {
         runGameSuit()
     }
 
-    fun headerStartReply(){
+    fun headerStartRepeat(){
         println("""     
     
         Masukan Pemain 1 HARUS!!: Gunting 
@@ -35,7 +35,7 @@ class App {
         runGameSuit()
     }
 
-    fun headerStartReplyHandleTypo(){
+    fun headerStartRepeatHandleTypo(){
         println("""     
    
         Masukan Pemain 1 HARUS!!: Gunting 

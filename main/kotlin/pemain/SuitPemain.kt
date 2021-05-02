@@ -18,7 +18,7 @@ class SuitPemain() {
         else if (pemainSatu.equals("Gunting", true))
         else {
             var replyGameSuit = App()
-            replyGameSuit.headerStartReply()
+            replyGameSuit.headerStartRepeat()
         }
 
 
@@ -57,7 +57,7 @@ class SuitPemain() {
                 PemainDuaMenang().pemainDuaMenang()
             }
             "Keluar" -> {
-                App().headerStartReplyHandleTypo()
+                App().headerStartRepeatHandleTypo()
             }
         }
 
