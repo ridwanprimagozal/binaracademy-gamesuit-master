@@ -1,39 +1,50 @@
 package pemain
 
-var seri : String = "DRAW!"
-var menangPlayerSatu: String ="Pemain 1 MENANG!"
-var menangPlayerDua : String ="Pemain 2 MENANG!"
-var isiUlang : String = "Silahkan Suit Ulang"
+import App
+import kotlin.system.exitProcess
+
+const val SERI: String = "DRAW!"
+const val MENANGPLAYERSATU: String = "Pemain 1 MENANG!"
+const val MENANGPLAYERDUA: String = "Pemain 2 MENANG!"
+
 
 class SuitPemain() {
 
 
-
     fun aksiPemainSatu(pemainSatu: String) {
 
-        if (pemainSatu.equals("Gunting",true)) {
-            seri
-        } else if (pemainSatu.equals("Gunting" ,true)){
-            menangPlayerSatu
-        } else if (pemainSatu.equals("Gunting", true)){
-            menangPlayerDua
+        if (pemainSatu.equals("Gunting", true)) {
+        } else if (pemainSatu.equals("Gunting", true))
+        else if (pemainSatu.equals("Gunting", true))
+        else {
+            var replyGameSuit = App()
+            replyGameSuit.headerStartReply()
         }
+
 
     }
 
     fun aksiPemainDua(pemainDua: String) {
 
-        if (pemainDua.equals("Gunting",true)) {
-            hasilSuitDraw("Draw")
-        } else if (pemainDua.equals("Kertas", true)){
-            hasilSuitDraw("PemainSatuMenang")
-        } else if (pemainDua.equals("Batu",true)){
-            hasilSuitDraw("PemainDuaMenang")
+        if (pemainDua.equals("Gunting", true)) {
+            hasilSuit("Draw")
+        } else if (pemainDua.equals("Kertas", true)) {
+            hasilSuit("PemainSatuMenang")
+            if (true){
+                exitProcess(0)
+            }
+        } else if (pemainDua.equals("Batu", true)) {
+            hasilSuit("PemainDuaMenang")
+            if (true){
+                exitProcess(0)
+            }
+        } else {
+            hasilSuit("Keluar")
         }
     }
 
 
-    fun hasilSuitDraw(hasil:String) {
+    fun hasilSuit(hasil: String) {
 
         when (hasil) {
             "Draw" -> {
@@ -45,11 +56,14 @@ class SuitPemain() {
             "PemainDuaMenang" -> {
                 PemainDuaMenang().pemainDuaMenang()
             }
-            else -> {
-                println("tidak ada")
+            "Keluar" -> {
+                App().headerStartReplyHandleTypo()
             }
         }
+
     }
+
+
 }
 
 

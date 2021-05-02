@@ -5,7 +5,7 @@ class PemainDuaMenang {
 
         println()
         println("=====================================")
-        println("Hasil: $menangPlayerDua")
+        println("Hasil: $MENANGPLAYERDUA")
         println("=====================================")
 
     }

@@ -1,13 +1,16 @@
 package pemain
 
+import kotlin.system.exitProcess
+
 class PemainSatuMenang {
 
     fun pemainSatuMenang() {
 
         println()
         println("=====================================")
-        println("Hasil: $menangPlayerSatu")
+        println("Hasil: $MENANGPLAYERSATU")
         println("=====================================")
+
 
     }
 }

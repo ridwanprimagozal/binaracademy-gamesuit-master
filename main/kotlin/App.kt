@@ -5,12 +5,12 @@ class App {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            App().runGameSuit()
+            App().headerStart()
         }
     }
 
 
-    fun runGameSuit(){
+    fun headerStart(){
         println("""     
     
         =============================================
@@ -18,6 +18,40 @@ class App {
         =============================================
         
     """.trimIndent())
+
+        runGameSuit()
+    }
+
+    fun headerStartReply(){
+        println("""     
+    
+        Masukan Pemain 1 HARUS!!: Gunting 
+        =============================================
+        GAME SUIT KOTLIN VERSION
+        =============================================
+        
+    """.trimIndent())
+
+        runGameSuit()
+    }
+
+    fun headerStartReplyHandleTypo(){
+        println("""     
+   
+        Masukan Pemain 1 HARUS!!: Gunting 
+        Masukan Pemain 2 HARUS!! diantara: Gunting, Batu, Kertas
+        =============================================
+        GAME SUIT KOTLIN VERSION
+        =============================================
+        
+    """.trimIndent())
+
+        runGameSuit()
+    }
+
+
+    fun runGameSuit(){
+
 
         println("1. Masukan Pemain 1: ")
         val pemainSatu = readLine().toString()
@@ -30,5 +64,7 @@ class App {
         val suitPemainDua = SuitPemain()
         suitPemainDua.aksiPemainDua(pemainDua)
     }
+
+
 
 }
