@@ -39,7 +39,7 @@ class SuitPemain() {
                 exitProcess(0)
             }
         } else {
-            hasilSuit("Keluar")
+            hasilSuit("PemainDuaTypo")
         }
     }
 
@@ -56,7 +56,7 @@ class SuitPemain() {
             "PemainDuaMenang" -> {
                 PemainDuaMenang().pemainDuaMenang()
             }
-            "Keluar" -> {
+            "PemainDuaTypo" -> {
                 App().headerStartRepeatHandleTypo()
             }
         }
